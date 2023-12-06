@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 성공</title>
+    <style>
+        .success-message {
+            background-color: #4CAF50; /* 녹색 배경 */
+            color: white; /* 흰색 텍스트 */
+            padding: 15px; /* 패딩 */
+            margin: 10px 0; /* 상하 마진 */
+            text-align: center; /* 중앙 정렬 */
+            opacity: 0; /* 처음에는 보이지 않도록 설정 */
+            transition: opacity 0.6s; /* 페이드 인 효과 */
+            position: fixed; /* 고정 위치 */
+            top: 10px; /* 상단에서의 위치 */
+            left: 50%; /* 왼쪽에서 50% 위치 */
+            transform: translateX(-50%); /* X축으로 -50% 이동하여 중앙 정렬 */
+        }
+    </style>
+</head>
+<body>
+
+<div id="successMessage" class="success-message">
+    회원가입 성공!
+</div>
+
+<script>
+    window.onload = function() {
+        var messageElement = document.getElementById('successMessage');
+        messageElement.style.opacity = 1;
+
+        setTimeout(function() {
+            messageElement.style.opacity = 0;
+        }, 3000);
+    };
+</script>
+
+</body>
+</html>
